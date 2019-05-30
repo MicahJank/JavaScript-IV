@@ -69,3 +69,98 @@ class ProjectManagers extends Instructor {
         console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
     }
 }
+
+
+
+// Creating the new objects
+
+// Person Objects
+const austen = new Person({
+    name: 'Austen',
+    location: 'California',
+    age: 35,
+  });
+
+const brad = new Person({
+    name: 'Bradley',
+    location: 'Florida',
+    age: 24
+});
+
+
+
+// Instructor Objects
+const josh = new Instructor({
+    name: 'Josh',
+    location: 'California',
+    age: 34,
+    specialty: 'Playing Banjo',
+    favLanguage: 'Javascript',
+    catchPhrase: 'Live long and prosper.'
+});
+
+const dan = new Instructor({
+    name: 'Dan',
+    location: 'Montana',
+    age: 35,
+    specialty: 'Teaching',
+    favLanguage: 'C#',
+    catchPhrase: 'Do, do not, there is no try.'
+});
+
+
+
+// Student Objects
+const micah = new Student({
+    name: 'Micah',
+    location: 'Wisconsin',
+    age: 27, 
+    previousBackground: 'none', 
+    className: 'WebPT7',
+    faveSubjects: ['HTML', 'CSS', 'Javascript', 'C#']
+});
+
+const heather = new Student({
+    name: 'Heather',
+    location: 'California',
+    age: 'unknown',
+    previousBackground: 'none', 
+    className: 'WebPT7',
+    faveSubjects: ['HTML', 'CSS', 'Javascript']
+});
+
+const megan = new Student({
+    name: 'Megan',
+    location: 'California',
+    age: 'unknown',
+    previousBackground: 'none', 
+    className: 'WebPT7',
+    faveSubjects: ['HTML', 'CSS', 'Javascript']
+});
+
+
+
+
+// Project Manager Objects
+const ryan = new ProjectManagers({
+    name: 'Ryan',
+    location: 'California',
+    age: 30,
+    specialty: 'Command Line',
+    favLanguage: 'Javascript',
+    catchPhrase: 'Hello I am Ryan.',
+    gradClassName: 'Web17',
+    favInstructor: 'Josh Knell'
+});
+
+const laryna = new ProjectManagers({
+    name: 'Laryna',
+    location: 'California',
+    age: 'unknown',
+    specialty: 'Javascript',
+    favLanguage: 'Javascript',
+    catchPhrase: 'Hello I am Laryna.',
+    gradClassName: 'Web17',
+    favInstructor: 'Dan Frehner'
+});
+
