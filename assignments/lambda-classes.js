@@ -49,7 +49,7 @@ class Student extends Person {
     }
 
     sprintChallenge(subject) {
-        console.log(`${student.name} has begun sprint challenge on ${subject}.`);
+        console.log(`${this.name} has begun sprint challenge on ${subject}.`);
     }
 }
 
@@ -87,6 +87,12 @@ const brad = new Person({
     age: 24
 });
 
+//testing
+// console.log(austen.name);
+// console.log(brad.name);
+// austen.speak();
+// brad.speak();
+
 
 
 // Instructor Objects
@@ -107,7 +113,6 @@ const dan = new Instructor({
     favLanguage: 'C#',
     catchPhrase: 'Do, do not, there is no try.'
 });
-
 
 
 // Student Objects
@@ -164,3 +169,23 @@ const laryna = new ProjectManagers({
     favInstructor: 'Dan Frehner'
 });
 
+
+// Testing
+
+// console.log(josh.name, josh.location, josh.age, josh.specialty);
+// josh.demo('Javascript');
+// console.log(dan.name, dan.catchPhrase);
+// dan.grade(micah, 'Javascript');
+
+// console.log(micah.name, micah.className);
+// micah.speak();
+// heather.listSubjects();
+// megan.PRAssignment('HTML Project');
+// heather.sprintChallenge('Javascript Classes');
+
+// ryan.speak();
+// laryna.standUp('wept7_laryna');
+// ryan.debugsCode(heather, 'Javascript');
+// console.log(laryna.gradClassName);
+// console.log(ryan.favInstructor);
+// laryna.grade(micah, 'Javascript');
