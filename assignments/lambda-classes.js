@@ -27,6 +27,23 @@ class Instructor extends Person {
     grade(student, subject) {
         console.log(`${student.name} receives a perfect score on ${subject}.`);
     }
+
+    giveGrade(student) {
+        const randomNum = function(){
+           return Math.floor(Math.random() * 10) + 1;
+        };
+
+        console.log(`${this.name} has started grading ${student.name}'s assignment!`);
+        let gradePoints = randomNum();
+        if (gradePoints > 5) {
+            student.grade += 10;
+            console.log(`${student.name} did really well! They got +10 points!`);
+        } else {
+            student.grade -= 10;
+            console.log(`${student.name} forgot a couple of missing brackets!! Oh No! They lose -10 points!`);
+        }
+
+    }
 }
 
 
@@ -36,6 +53,7 @@ class Student extends Person {
         this.previousBackground = studentAttrs.previousBackground;
         this.className = studentAttrs.className;
         this.faveSubjects = studentAttrs.faveSubjects;
+        this.grade = studentAttrs.grade;
     }
 
     listSubjects() {
@@ -50,6 +68,16 @@ class Student extends Person {
 
     sprintChallenge(subject) {
         console.log(`${this.name} has begun sprint challenge on ${subject}.`);
+    }
+
+    graduate() {
+        if (this.grade > 70) {
+            console.log(`${this.name} has a grade of ${this.grade}!`);
+            console.log(`Congratulations, ${this.name}! You graduated!`);
+        } else {
+            console.log(`${this.name} has a grade of ${this.grade}!`);
+            console.log(`Sorry, ${this.name}, looks like you still got some work to do!`);
+        }
     }
 }
 
@@ -122,7 +150,8 @@ const micah = new Student({
     age: 27, 
     previousBackground: 'none', 
     className: 'WebPT7',
-    faveSubjects: ['HTML', 'CSS', 'Javascript', 'C#']
+    faveSubjects: ['HTML', 'CSS', 'Javascript', 'C#'],
+    grade: 80
 });
 
 const heather = new Student({
@@ -131,7 +160,8 @@ const heather = new Student({
     age: 'unknown',
     previousBackground: 'none', 
     className: 'WebPT7',
-    faveSubjects: ['HTML', 'CSS', 'Javascript']
+    faveSubjects: ['HTML', 'CSS', 'Javascript'],
+    grade: 80
 });
 
 const megan = new Student({
@@ -140,7 +170,8 @@ const megan = new Student({
     age: 'unknown',
     previousBackground: 'none', 
     className: 'WebPT7',
-    faveSubjects: ['HTML', 'CSS', 'Javascript']
+    faveSubjects: ['HTML', 'CSS', 'Javascript'],
+    grade: 80
 });
 
 
@@ -189,3 +220,16 @@ const laryna = new ProjectManagers({
 // console.log(laryna.gradClassName);
 // console.log(ryan.favInstructor);
 // laryna.grade(micah, 'Javascript');
+
+// dan.giveGrade(micah);
+// laryna.giveGrade(micah);
+// josh.giveGrade(micah);
+// ryan.giveGrade(micah);
+// micah.graduate();
+
+
+dan.giveGrade(megan);
+laryna.giveGrade(megan);
+josh.giveGrade(megan);
+ryan.giveGrade(megan);
+megan.graduate();
